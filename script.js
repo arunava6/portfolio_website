@@ -127,7 +127,7 @@ window.addEventListener('scroll', () => {
 });
 
 const typingTextElement = document.querySelector(".typing-text");
-const typingTexts = ["Data Analyst", "Web Developer", "Creative Thinker"];
+const typingTexts = ["SDE Enthusiast","Data Analyst", "Web Developer"];
 let typingIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

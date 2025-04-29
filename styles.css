@@ -40,6 +40,7 @@ body.light-mode #skills,
 body.light-mode #tools,
 body.light-mode #projects,
 body.light-mode #education,
+body.light-mode #achievements,
 body.light-mode #certifications,
 body.light-mode #resume,
 body.light-mode #contact {
@@ -908,6 +909,41 @@ body.light-mode .education-card .achievement {
     font-size: 1.2rem;
 }
 
+#achievements {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    justify-items: center;
+}
+
+.achievement-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(139, 92, 246, 0.1));
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    max-width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body.light-mode .achievement-card {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(139, 92, 246, 0.2));
+}
+
+
 #certifications {
     background: rgba(0, 0, 0, 0.3);
 }
@@ -928,7 +964,7 @@ body.light-mode .education-card .achievement {
     transition: all 0.4s;
     position: relative;
     overflow: hidden;
-    height: 250px; /* Fixed height for consistency */
+    height: 250px;
 }
 
 body.light-mode .certification-card {
@@ -951,7 +987,7 @@ body.light-mode .certification-card {
 }
 
 .certification-card:hover .cert-image {
-    opacity: 0.7; /* Dim the image on hover */
+    opacity: 0.7;
 }
 
 .cert-overlay {
@@ -1252,7 +1288,7 @@ body.light-mode .contact-links a:hover {
         font-size: 1.6rem;
     }
     
-    .projects-grid, .certifications-grid {
+    .projects-grid, .achievements-grid, .certifications-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
@@ -1358,6 +1394,30 @@ body.light-mode .contact-links a:hover {
         font-size: 1.1rem;
     }
 
+    .achievement-card {
+        width: 100%;
+        height: 350px;
+    }
+
+    .achievement-card .badge-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .achievement-card .badge-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .achievement-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .achievement-card p {
+        font-size: 1rem;
+    }
+
     .certification-card {
         height: 200px;
     }
@@ -1440,8 +1500,20 @@ body.light-mode .contact-links a:hover {
         font-size: 1rem;
     }
 
-    .projects-grid, .certifications-grid {
+    .projects-grid, .achievements-grid, .certifications-grid {
         grid-template-columns: 1fr;
+    }
+
+    .achievement-card {
+        height: 320px;
+    }
+
+    .achievement-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .achievement-card p {
+        font-size: 0.9rem;
     }
 
     .certification-card {
